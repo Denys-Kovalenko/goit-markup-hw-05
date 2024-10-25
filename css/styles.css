@@ -625,7 +625,7 @@ display: inline-block;
     transform: translate(-50%, -50%);
     padding: 24px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 24px 24px;
+    padding: 72px 24px 24px 24px;
 }
 
 
@@ -646,14 +646,21 @@ display: inline-block;
     align-items: center;
     justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #e7e9fc;
 }
 
-.modal-close-btn:hover {
+.modal-close-btn:hover,
+.modal-close-btn:focus {
     background-color: #404bbf;
     border-color: #fff;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-close-btn:hover .modal-close-icon {
-    fill: #fff;
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+fill: #fff;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 
@@ -661,6 +668,7 @@ display: inline-block;
     width: 8px;
     height: 8px;
     fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -678,10 +686,10 @@ display: inline-block;
 
 .modal-input-form{
     width: 100%;
-    border: 1px solid rgba(46, 47, 66, 0.4);
+    border: 1px solid rgba(46, 47, 66, 0.4)
     border-radius: 4px;
     height: 40px;
-    border-color: transparent;
+    background-color: transparent;
     padding-left: 38px;
     outline: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -693,19 +701,22 @@ display: inline-block;
 .modal-input-form:focus,
 .modal-input-form:hover {
     border: 1px solid #4d5ae5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input-form:focus + .icons-label {
     fill: #4d5ae5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input-form:hover + .icons-label {
     fill: #4d5ae5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-label{
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
     display: block;
@@ -713,7 +724,7 @@ display: inline-block;
 }
 
 .modal-field{
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 .input-wrapper{
@@ -738,14 +749,18 @@ display: inline-block;
     border: 1px solid rgba(46, 47, 66, 0.4);
     background-color: transparent;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 8px 16px;
     outline: transparent;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
 }
 
 .modal-textarea::placeholder{
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
 }
@@ -753,12 +768,13 @@ display: inline-block;
 .modal-textarea:hover,
 .modal-textarea:focus{
     border: 1px solid #4d5ae5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 .modal-check-text{
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
     display: flex;
@@ -767,21 +783,23 @@ display: inline-block;
 
 
 .modal-check-span{
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     margin-right: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
+    display: inline-flex;
     fill: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-check:checked + .modal-check-text .modal-check-span {
     border-radius: 2px;
     background-color: #404bbf;
-    border: 1px solid #404bbf;
+    border: 1px solid #4d5ae5;
     border: none;
     fill: #f4f4fd;
 }
@@ -795,10 +813,11 @@ display: inline-block;
 
 
 .button-form{
+    font-weight: 500
     gap: 24px;
     border-radius: 4px;
     padding: 16px 32px;
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background-color: #4d5ae5;
@@ -809,12 +828,14 @@ display: inline-block;
     text-align: center;
     color: #fff;
     cursor: pointer;
+    display: block;
     margin: 24px 95px;
-    
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-form:hover,
 .button-form:focus{
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background: #404bbf;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
