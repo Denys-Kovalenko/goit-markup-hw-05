@@ -575,8 +575,14 @@ display: inline-block;
     letter-spacing: 0.04em;
     text-align: center;
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.footer-btn-svg {
+    fill: #fff;
+}
 
 
 /* __________________backdrop_____________ */
