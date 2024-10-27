@@ -604,7 +604,7 @@ display: inline-block;
 
 
 
-/* .backdrop {
+.backdrop {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -620,7 +620,7 @@ display: inline-block;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-} */
+}
 
 .backdrop:not(.is-open) .modal{
     transform: translate(-50%, -50%) scale(1.5);
@@ -795,6 +795,10 @@ display: inline-block;
     align-items: center;
 }
 
+.modal-check{
+    border: none;
+    display: inline-flex;
+}
 
 .modal-check-span{
     display: inline-flex;
