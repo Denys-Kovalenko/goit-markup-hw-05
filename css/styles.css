@@ -792,9 +792,6 @@ display: inline-block;
     color: #8e8f99;
 }
 
-.modal-check{
-    border: none;
-}
 
 .modal-check-span{
     width: 16px;
@@ -809,15 +806,10 @@ display: inline-block;
     display: inline-flex;
 }
 
-.modal-check-icon{
-    border: none;
-}
 
 .modal-check:checked + .modal-check-text > .modal-check-span {
     border: none;
-    border-radius: 2px;
     background-color: #404bbf;
-    border: 1px solid #4d5ae5;
     fill: #f4f4fd;
 }
 
