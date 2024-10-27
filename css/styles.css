@@ -813,7 +813,7 @@ display: inline-block;
     border: none;
 }
 
-.modal-check:checked + .modal-check-text .modal-check-span {
+.modal-check:checked + .modal-check-text > .modal-check-span {
     border: none;
     border-radius: 2px;
     background-color: #404bbf;
